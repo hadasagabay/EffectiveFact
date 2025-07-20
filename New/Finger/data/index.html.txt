@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>שיבוץ עובדים</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding-top: 50px; }
+  </style>
+</head>
+<body>
+  <h1>👆 הנח את האצבע לזיהוי</h1>
+  <p id="status">ממתין לטביעת אצבע...</p>
+
+  <script>
+    async function fetchStatus() {
+      try {
+        const res = await fetch('/api/latest-attendance');
+        const data = await res.json();
+        document.getElementById('status').innerText = data.statusMessage;
+      } catch (e) {
+        document.getElementById('status').innerText = "שגיאה בקבלת נתונים";
+      }
+    }
+
+    setInterval(fetchStatus, 2000);
+    fetchStatus();
+  </script>
+</body>
+</html>
