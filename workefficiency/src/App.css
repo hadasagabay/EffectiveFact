@@ -1,0 +1,82 @@
+/* src/App.css */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.main-message {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #3498db; /* כחול יפה */
+  text-align: center;
+  margin: 50px 0;
+  padding: 20px;
+  background-color: #eaf6fd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  min-width: 300px; /* כדי שלא יתכווץ יותר מדי */
+  max-width: 80%;
+}
+
+.employee-details-card {
+  background-color: #ecf0f1;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: right; /* יישור לימין עבור עברית */
+  width: 100%;
+  max-width: 500px;
+}
+
+.employee-details-card h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  border-bottom: 2px solid #bdc3c7;
+  padding-bottom: 10px;
+}
+
+.employee-details-card p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.employee-details-card strong {
+  color: #34495e;
+}
+
+.error-message {
+  color: #e74c3c;
+  background-color: #fdeded;
+  border: 1px solid #e74c3c;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* התאמות נוספות עבור עברית */
+html, body, .app-container {
+  direction: rtl; /* כיווניות מימין לשמאל */
+}
